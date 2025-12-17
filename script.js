@@ -110,14 +110,18 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         filteredProducts.forEach(product => {
+            // UPDATED SECTION: Added classes for uniform height (h-100, d-flex, mt-auto)
             list.innerHTML += `
                 <div class="col-md-3 mb-4">
-                    <div class="card product-card" data-category="${product.category}">
+                    <div class="card product-card h-100" data-category="${product.category}">
                         <img src="${product.image}" class="card-img-top" alt="${product.name}" onerror="this.src='https://via.placeholder.com/300x200'">
-                        <div class="card-body">
+                        <div class="card-body d-flex flex-column">
                             <h5 class="card-title">${product.name}</h5>
-                            <p class="card-text">₹${product.price.toFixed(2)}</p>
-                            <button class="btn btn-primary add-to-cart" data-id="${product.id}">Add to Cart</button>
+                            
+                            <div class="mt-auto">
+                                <p class="card-text fw-bold">₹${product.price.toFixed(2)}</p>
+                                <button class="btn btn-primary w-100 add-to-cart" data-id="${product.id}">Add to Cart</button>
+                            </div>
                         </div>
                     </div>
                 </div>
