@@ -1,19 +1,52 @@
 /* Existing styles */
 body {
     font-family: Arial, sans-serif;
+    background-color: #f4f4f4; /* Added light gray bg for better contrast */
 }
 
 .hero {
     background: linear-gradient(to right, #28a745, #20c997);
+    color: white;
+    padding: 60px 0;
 }
 
-.product-card {
-    transition: transform 0.2s;
+/* --- UNIFORM PRODUCT BOX STYLES (NEW) --- */
+/* 1. Make the card fill the height of the row */
+.card {
+    height: 100%; 
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.product-card:hover {
-    transform: scale(1.05);
+/* 2. Hover effect */
+.card:hover {
+    transform: translateY(-5px); /* Moves up slightly */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
 }
+
+/* 3. FIX THE IMAGE SIZE: This is the most important part */
+.card-img-top {
+    width: 100%;
+    height: 200px;        /* Forces all images to be exactly 200px tall */
+    object-fit: contain;  /* Ensures the whole product is visible, not cut off */
+    padding: 20px;        /* Adds white space around the product */
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+}
+
+/* 4. Align content inside the card */
+.card-body {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+}
+
+/* This class pushes the price and button to the bottom */
+.mt-auto {
+    margin-top: auto !important;
+}
+/* --- END UNIFORM STYLES --- */
 
 #cart-link, #login-link {
     cursor: pointer;
@@ -47,11 +80,6 @@ body {
 .quantity-controls button {
     width: 30px;
     height: 30px;
-}
-
-/* Login page styling */
-.card {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* New Attractive Navbar Styles */
