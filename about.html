@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - ISHA Hardware Store</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header with Navigation -->
+    <header class="navbar navbar-expand-lg navbar-dark bg-gradient sticky-top shadow">
+        <div class="container">
+            <a class="navbar-brand fw-bold d-flex align-items-center" href="index.html">
+                <i class="bi bi-tools me-2"></i>
+                ISHA Hardware Store
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="categoriesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Categories
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="category.html?category=electric">Electric</a></li>
+                            <li><a class="dropdown-item" href="category.html?category=farming">Farming</a></li>
+                            <li><a class="dropdown-item" href="category.html?category=tools">Tools</a></li>
+                            <li><a class="dropdown-item" href="category.html?category=pipes">Pipes</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item" id="admin-link" style="display: none;"><a class="nav-link" href="admin.html"><i class="bi bi-gear-fill"></i> Admin Panel</a></li>
+                </ul>
+                <form class="d-flex me-3" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search products..." aria-label="Search">
+                    <button class="btn btn-outline-light" type="submit">Search</button>
+                </form>
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="login.html" id="login-link">Admin Login</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cart.html" id="cart-link">Cart (<span id="cart-count">0</span>)</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">About ISHA Hardware Store</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <h4>Our Story</h4>
+                    <p>Founded in 2023, ISHA Hardware Store has been serving the community with high-quality hardware supplies for electricians, farmers, builders, and homeowners. We pride ourselves on offering a wide range of products at competitive prices, backed by expert advice and excellent customer service.</p>
+                </div>
+                <div class="col-md-6">
+                    <h4>Our Mission</h4>
+                    <p>To provide reliable, affordable hardware solutions that empower our customers to tackle any project with confidence. Whether you're wiring a home, tilling a field, or fixing a pipe, we're here to help.</p>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <img src="https://via.placeholder.com/800x400?text=Store+Image" alt="Store Image" class="img-fluid rounded">
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <div class="container">
+            <p>&copy; 2023 ISHA Hardware Store. All rights reserved. | Contact: info@ishahardware.com | Phone: (123) 456-7890</p>
+            <p>Visit our physical store at 123 Hardware Lane, City, State.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
